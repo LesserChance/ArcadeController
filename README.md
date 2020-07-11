@@ -61,7 +61,7 @@ Buy extra screw-in terminals to make more control panels, and buy the Panel PCBs
 | Main | Card Edge Connector | [Digikey](https://www.digikey.com/product-detail/en/hirose-electric-co-ltd/CR22A-44D-2.54DSA(70)/H122591-ND/5148616) | $6.10 | 1 |
 | Main | Micro Pin Headers | [Digikey](https://www.digikey.com/product-detail/en/sullins-connector-solutions/PREC040SAAN-RC/S1012EC-40-ND/2774814) | $.51 | 2 |
 | Main | Micro connection headers | [Digikey](https://www.digikey.com/product-detail/en/adafruit-industries-llc/598/1528-2537-ND/8299908) | $2.95 | 1 (cut each down to 17 pins) |
-| Main+Panel | Screw-in Terminal | [Digikey](hhttps://www.digikey.com/products/en?keywords=TB001-500-12BE%20) | $1.73 | 5 (+4 for each additional panel) |
+| Main+Panel | Screw-in Terminal | [Digikey](https://www.digikey.com/products/en?keywords=TB001-500-12BE%20) | $1.73 | 5 (+4 for each additional panel) |
 | Panel | PCB | [JLCPCB](jlcpcb.com/) | $12.00 | 1 (price was for 10) |
 
 _Why do the PCBs have the Slurm logo on them? I dont know, I just really like Futurama and happened to have this image handy..._
