@@ -51,7 +51,7 @@ The wiring doc outlines standard wiring for trackballs and spinners directly int
 # Supplies
 _Prices are USD, do not include shipping, and are as of July 2020._
 
-Buy extra screw-in terminals to make more control panels, and buy the Panel PCBs in bulk. Given the below prices you could create 10 easily-swappable control panels for ~$80, and you may be able to find those screw terminals more cheaply, or decide to bypass those, just solder in your connections and have it all for ~$40. Over course the price of buttons/joysticks/trackballs/steering wheels/etc is additional.
+Buy extra screw-in terminals to make more control panels, and buy the Panel PCBs in bulk. Given the below prices you could create 10 easily-swappable control panels for ~$80, and you may be able to find those screw terminals more cheaply, or decide to bypass those, just solder in your connections and have it all for ~$40. Of course the price of buttons/joysticks/trackballs/steering wheels/etc is additional.
 
 | Component | Part | Supply | Cost | Count |
 |----------|----------|----------|----------|----------|
