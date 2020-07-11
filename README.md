@@ -27,6 +27,8 @@ The Main PCB is what connects to your computer through USB. In total it requires
 
 ![](assets/ArcadeMain-PCB.png?raw=true)
 
+**Micro Headers** These are the positions where you plug in Arduino Micros.
+
 **Screw in Terminals** These can be used for shared functions e.g. Player 1/2 Start/Coin as well as menu or function buttons. 1-6 are connected to "Player One" Micro, 7-12 are connected to "Player Two" Micro.
 
 ### Arduino
