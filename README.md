@@ -1,5 +1,5 @@
 # ArcadeController
-The goal of this project is to make an easily-swappable control panel for a homebuilt arcade. There are two PCBs that are designed to mate through the PCB edge connection. 
+The goal of this project is to make an easily-swappable control panel for a homebuilt arcade. There are two PCBs that are designed to mate through the PCB edge connection. By default, this setup will allow for any control panel to have a maximum of 2 joysticks and 14 buttons (22 total digital inputs), 6 axes (e.g. 6 spinners) and two USB devices. You can easily edit the program on the arduino to assure all of your control panels will work, though, for instance if you need more digital inputs and fewer axes.
 
 As I build out more control panels I'll be adding pictures and diagrams of how everything operates.
 
@@ -33,7 +33,7 @@ The Main PCB is what connects to your computer through USB. In total it requires
 
 ### Arduino
 
-The program is built to run on an [Ardunio Micro](https://store.arduino.cc/usa/arduino-micro). Two Arduino Micros are required for two-player functionality. Player One and the two additional USB devices will work fine with just one, though, if you can get away with aa maximum of 17 total digital inputs on any control panel.
+The program is built to run on an [Ardunio Micro](https://store.arduino.cc/usa/arduino-micro). Two Arduino Micros are required for two-player functionality. Player One and the two additional USB devices will work fine with just one, though, if you can get away with a maximum of 17 total digital inputs on any control panel.
 
 When plugged in the Arduinos will be treated as a joystick by the computer. The joystick, by default is 5 axis (X/Y, rX/rY/rZ) and 13 button.
 
