@@ -31,7 +31,7 @@ The Main PCB is what connects to your computer through USB. In total it requires
 
 ### Arduino
 
-The program is built to run on an [Ardunio Micro](https://store.arduino.cc/usa/arduino-micro). Two Arduino Micros are required for two-player functionality. Player One and the two additional USB devices will work fine with just one, though, if you only want single player control panels.
+The program is built to run on an [Ardunio Micro](https://store.arduino.cc/usa/arduino-micro). Two Arduino Micros are required for two-player functionality. Player One and the two additional USB devices will work fine with just one, though, if you can get away with aa maximum of 17 total digital inputs on any control panel.
 
 When plugged in the Arduinos will be treated as a joystick by the computer. The joystick, by default is 5 axis (X/Y, rX/rY/rZ) and 13 button.
 
