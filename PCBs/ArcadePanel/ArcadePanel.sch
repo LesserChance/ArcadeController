@@ -5,9 +5,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
+Title "Arcade Control Panel"
+Date "2020-07-14"
+Rev "v2.0"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -15,619 +15,376 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector:Screw_Terminal_01x10 J1
-U 1 1 5EE57EDF
-P 3900 1400
-F 0 "J1" H 3980 1392 50  0000 L CNN
-F 1 "Screw_Terminal_01x10" H 3980 1301 50  0000 L CNN
-F 2 "TB001-500-10BE:CUI_TB001-500-10BE" H 3900 1400 50  0001 C CNN
-F 3 "~" H 3900 1400 50  0001 C CNN
-	1    3900 1400
-	1    0    0    -1  
+L Connector:Screw_Terminal_01x08 J4
+U 1 1 5F15BF02
+P 6850 4200
+F 0 "J4" V 6950 4550 50  0000 R CNN
+F 1 "Screw_Terminal_01x08" V 6950 4450 50  0000 R CNN
+F 2 "TB001-500-08BE:CUI_TB001-500-08BE" H 6850 4200 50  0001 C CNN
+F 3 "~" H 6850 4200 50  0001 C CNN
+	1    6850 4200
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x10 J5
+U 1 1 5F165B1A
+P 4750 4150
+F 0 "J5" V 4850 3600 50  0000 L CNN
+F 1 "Screw_Terminal_01x10" V 4850 3700 50  0000 L CNN
+F 2 "TB001-500-10BE:CUI_TB001-500-10BE" H 4750 4150 50  0001 C CNN
+F 3 "~" H 4750 4150 50  0001 C CNN
+	1    4750 4150
+	0    1    1    0   
 $EndComp
 $Comp
 L Connector:Screw_Terminal_01x10 J2
-U 1 1 5EE58F67
-P 3900 2450
-F 0 "J2" H 3980 2442 50  0000 L CNN
-F 1 "Screw_Terminal_01x10" H 3980 2351 50  0000 L CNN
-F 2 "TB001-500-10BE:CUI_TB001-500-10BE" H 3900 2450 50  0001 C CNN
-F 3 "~" H 3900 2450 50  0001 C CNN
-	1    3900 2450
-	1    0    0    -1  
+U 1 1 5F1675AC
+P 3750 4150
+F 0 "J2" V 3850 3600 50  0000 L CNN
+F 1 "Screw_Terminal_01x10" V 3850 3700 50  0000 L CNN
+F 2 "TB001-500-10BE:CUI_TB001-500-10BE" H 3750 4150 50  0001 C CNN
+F 3 "~" H 3750 4150 50  0001 C CNN
+	1    3750 4150
+	0    1    1    0   
 $EndComp
 $Comp
-L Connector:Screw_Terminal_01x12 J4
-U 1 1 5EE5CF00
-P 3900 4850
-F 0 "J4" H 3980 4842 50  0000 L CNN
-F 1 "Screw_Terminal_01x12" H 3980 4751 50  0000 L CNN
-F 2 "TB001-500-12BE:CUI_TB001-500-12BE" H 3900 4850 50  0001 C CNN
-F 3 "~" H 3900 4850 50  0001 C CNN
-	1    3900 4850
-	1    0    0    -1  
+L Connector:Screw_Terminal_01x10 J1
+U 1 1 5F168AF0
+P 7750 4200
+F 0 "J1" V 7850 4600 50  0000 C CNN
+F 1 "Screw_Terminal_01x10" V 7850 4100 50  0000 C CNN
+F 2 "TB001-500-10BE:CUI_TB001-500-10BE" H 7750 4200 50  0001 C CNN
+F 3 "~" H 7750 4200 50  0001 C CNN
+	1    7750 4200
+	0    1    1    0   
 $EndComp
 $Comp
-L Connector:Screw_Terminal_01x12 J3
-U 1 1 5EE5E7DD
-P 3900 3600
-F 0 "J3" H 3980 3592 50  0000 L CNN
-F 1 "Screw_Terminal_01x12" H 3980 3501 50  0000 L CNN
-F 2 "TB001-500-12BE:CUI_TB001-500-12BE" H 3900 3600 50  0001 C CNN
-F 3 "~" H 3900 3600 50  0001 C CNN
-	1    3900 3600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J47
-U 1 1 5EE56431
-P 3400 5350
-F 0 "J47" H 3508 5531 50  0001 C CNN
-F 1 "1" H 3508 5440 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 5350 50  0001 C CNN
-F 3 "~" H 3400 5350 50  0001 C CNN
-	1    3400 5350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J46
-U 1 1 5EE56E3D
-P 3400 5250
-F 0 "J46" H 3508 5431 50  0001 C CNN
-F 1 "1" H 3508 5340 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 5250 50  0001 C CNN
-F 3 "~" H 3400 5250 50  0001 C CNN
-	1    3400 5250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J45
-U 1 1 5EE571D9
-P 3400 5150
-F 0 "J45" H 3508 5331 50  0001 C CNN
-F 1 "1" H 3508 5240 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 5150 50  0001 C CNN
-F 3 "~" H 3400 5150 50  0001 C CNN
-	1    3400 5150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J44
-U 1 1 5EE57445
-P 3400 5050
-F 0 "J44" H 3508 5231 50  0001 C CNN
-F 1 "1" H 3508 5140 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 5050 50  0001 C CNN
-F 3 "~" H 3400 5050 50  0001 C CNN
-	1    3400 5050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J43
-U 1 1 5EE57652
-P 3400 4950
-F 0 "J43" H 3508 5131 50  0001 C CNN
-F 1 "1" H 3508 5040 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 4950 50  0001 C CNN
-F 3 "~" H 3400 4950 50  0001 C CNN
-	1    3400 4950
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J42
-U 1 1 5EE5791D
-P 3400 4850
-F 0 "J42" H 3508 5031 50  0001 C CNN
-F 1 "1" H 3508 4940 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 4850 50  0001 C CNN
-F 3 "~" H 3400 4850 50  0001 C CNN
-	1    3400 4850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J41
-U 1 1 5EE57A33
-P 3400 4750
-F 0 "J41" H 3508 4931 50  0001 C CNN
-F 1 "1" H 3508 4840 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 4750 50  0001 C CNN
-F 3 "~" H 3400 4750 50  0001 C CNN
-	1    3400 4750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J40
-U 1 1 5EE57B82
-P 3400 4650
-F 0 "J40" H 3508 4831 50  0001 C CNN
-F 1 "1" H 3508 4740 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 4650 50  0001 C CNN
-F 3 "~" H 3400 4650 50  0001 C CNN
-	1    3400 4650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J39
-U 1 1 5EE57DEE
-P 3400 4550
-F 0 "J39" H 3508 4731 50  0001 C CNN
-F 1 "1" H 3508 4640 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 4550 50  0001 C CNN
-F 3 "~" H 3400 4550 50  0001 C CNN
-	1    3400 4550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J38
-U 1 1 5EE58021
-P 3400 4450
-F 0 "J38" H 3508 4631 50  0001 C CNN
-F 1 "1" H 3508 4540 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 4450 50  0001 C CNN
-F 3 "~" H 3400 4450 50  0001 C CNN
-	1    3400 4450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J37
-U 1 1 5EE581BC
-P 3400 4350
-F 0 "J37" H 3508 4531 50  0001 C CNN
-F 1 "1" H 3508 4440 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 4350 50  0001 C CNN
-F 3 "~" H 3400 4350 50  0001 C CNN
-	1    3400 4350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J36
-U 1 1 5EE58461
-P 3400 4200
-F 0 "J36" H 3508 4381 50  0001 C CNN
-F 1 "1" H 3508 4290 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 4200 50  0001 C CNN
-F 3 "~" H 3400 4200 50  0001 C CNN
-	1    3400 4200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J35
-U 1 1 5EE5859D
-P 3400 4100
-F 0 "J35" H 3508 4281 50  0001 C CNN
-F 1 "1" H 3508 4190 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 4100 50  0001 C CNN
-F 3 "~" H 3400 4100 50  0001 C CNN
-	1    3400 4100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J34
-U 1 1 5EE58784
-P 3400 4000
-F 0 "J34" H 3508 4181 50  0001 C CNN
-F 1 "1" H 3508 4090 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 4000 50  0001 C CNN
-F 3 "~" H 3400 4000 50  0001 C CNN
-	1    3400 4000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J33
-U 1 1 5EE58A3C
-P 3400 3900
-F 0 "J33" H 3508 4081 50  0001 C CNN
-F 1 "1" H 3508 3990 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 3900 50  0001 C CNN
-F 3 "~" H 3400 3900 50  0001 C CNN
-	1    3400 3900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J32
-U 1 1 5EE58D07
-P 3400 3800
-F 0 "J32" H 3508 3981 50  0001 C CNN
-F 1 "1" H 3508 3890 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 3800 50  0001 C CNN
-F 3 "~" H 3400 3800 50  0001 C CNN
-	1    3400 3800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J31
-U 1 1 5EE5907D
-P 3400 3700
-F 0 "J31" H 3508 3881 50  0001 C CNN
-F 1 "1" H 3508 3790 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 3700 50  0001 C CNN
-F 3 "~" H 3400 3700 50  0001 C CNN
-	1    3400 3700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J30
-U 1 1 5EE59394
-P 3400 3600
-F 0 "J30" H 3508 3781 50  0001 C CNN
-F 1 "1" H 3508 3690 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 3600 50  0001 C CNN
-F 3 "~" H 3400 3600 50  0001 C CNN
-	1    3400 3600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J29
-U 1 1 5EE5964C
-P 3400 3500
-F 0 "J29" H 3508 3681 50  0001 C CNN
-F 1 "1" H 3508 3590 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 3500 50  0001 C CNN
-F 3 "~" H 3400 3500 50  0001 C CNN
-	1    3400 3500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J28
-U 1 1 5EE59833
-P 3400 3400
-F 0 "J28" H 3508 3581 50  0001 C CNN
-F 1 "1" H 3508 3490 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 3400 50  0001 C CNN
-F 3 "~" H 3400 3400 50  0001 C CNN
-	1    3400 3400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J27
-U 1 1 5EE59B83
-P 3400 3300
-F 0 "J27" H 3508 3481 50  0001 C CNN
-F 1 "1" H 3508 3390 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 3300 50  0001 C CNN
-F 3 "~" H 3400 3300 50  0001 C CNN
-	1    3400 3300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J26
-U 1 1 5EE59C73
-P 3400 3200
-F 0 "J26" H 3508 3381 50  0001 C CNN
-F 1 "1" H 3508 3290 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 3200 50  0001 C CNN
-F 3 "~" H 3400 3200 50  0001 C CNN
-	1    3400 3200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J25
-U 1 1 5EE59ECC
-P 3400 3100
-F 0 "J25" H 3508 3281 50  0001 C CNN
-F 1 "1" H 3508 3190 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 3100 50  0001 C CNN
-F 3 "~" H 3400 3100 50  0001 C CNN
-	1    3400 3100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J24
-U 1 1 5EE5A1D0
-P 3400 2950
-F 0 "J24" H 3508 3131 50  0001 C CNN
-F 1 "1" H 3508 3040 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 2950 50  0001 C CNN
-F 3 "~" H 3400 2950 50  0001 C CNN
-	1    3400 2950
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J23
-U 1 1 5EE5A3F0
-P 3400 2850
-F 0 "J23" H 3508 3031 50  0001 C CNN
-F 1 "1" H 3508 2940 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 2850 50  0001 C CNN
-F 3 "~" H 3400 2850 50  0001 C CNN
-	1    3400 2850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J22
-U 1 1 5EE5A552
-P 3400 2750
-F 0 "J22" H 3508 2931 50  0001 C CNN
-F 1 "1" H 3508 2840 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 2750 50  0001 C CNN
-F 3 "~" H 3400 2750 50  0001 C CNN
-	1    3400 2750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J21
-U 1 1 5EE5A7F7
-P 3400 2650
-F 0 "J21" H 3508 2831 50  0001 C CNN
-F 1 "1" H 3508 2740 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 2650 50  0001 C CNN
-F 3 "~" H 3400 2650 50  0001 C CNN
-	1    3400 2650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J20
-U 1 1 5EE5A9DC
-P 3400 2550
-F 0 "J20" H 3508 2731 50  0001 C CNN
-F 1 "1" H 3508 2640 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 2550 50  0001 C CNN
-F 3 "~" H 3400 2550 50  0001 C CNN
-	1    3400 2550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J19
-U 1 1 5EE5ACA7
-P 3400 2450
-F 0 "J19" H 3508 2631 50  0001 C CNN
-F 1 "1" H 3508 2540 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 2450 50  0001 C CNN
-F 3 "~" H 3400 2450 50  0001 C CNN
-	1    3400 2450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J18
-U 1 1 5EE5AEC7
-P 3400 2350
-F 0 "J18" H 3508 2531 50  0001 C CNN
-F 1 "1" H 3508 2440 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 2350 50  0001 C CNN
-F 3 "~" H 3400 2350 50  0001 C CNN
-	1    3400 2350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J17
-U 1 1 5EE5B029
-P 3400 2250
-F 0 "J17" H 3508 2431 50  0001 C CNN
-F 1 "1" H 3508 2340 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 2250 50  0001 C CNN
-F 3 "~" H 3400 2250 50  0001 C CNN
-	1    3400 2250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J16
-U 1 1 5EE5B223
-P 3400 2150
-F 0 "J16" H 3508 2331 50  0001 C CNN
-F 1 "1" H 3508 2240 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 2150 50  0001 C CNN
-F 3 "~" H 3400 2150 50  0001 C CNN
-	1    3400 2150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J15
-U 1 1 5EE5B469
-P 3400 2050
-F 0 "J15" H 3508 2231 50  0001 C CNN
-F 1 "1" H 3508 2140 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 2050 50  0001 C CNN
-F 3 "~" H 3400 2050 50  0001 C CNN
-	1    3400 2050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J13
-U 1 1 5EE5B5B8
-P 3400 1800
-F 0 "J13" H 3508 1981 50  0001 C CNN
-F 1 "1" H 3508 1890 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 1800 50  0001 C CNN
-F 3 "~" H 3400 1800 50  0001 C CNN
-	1    3400 1800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J12
-U 1 1 5EE5B6A8
-P 3400 1700
-F 0 "J12" H 3508 1881 50  0001 C CNN
-F 1 "1" H 3508 1790 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 1700 50  0001 C CNN
-F 3 "~" H 3400 1700 50  0001 C CNN
-	1    3400 1700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J11
-U 1 1 5EE5B87C
-P 3400 1600
-F 0 "J11" H 3508 1781 50  0001 C CNN
-F 1 "1" H 3508 1690 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 1600 50  0001 C CNN
-F 3 "~" H 3400 1600 50  0001 C CNN
-	1    3400 1600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J10
-U 1 1 5EE5C309
-P 3400 1500
-F 0 "J10" H 3508 1681 50  0001 C CNN
-F 1 "1" H 3508 1590 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 1500 50  0001 C CNN
-F 3 "~" H 3400 1500 50  0001 C CNN
-	1    3400 1500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J9
-U 1 1 5EE5C59B
-P 3400 1400
-F 0 "J9" H 3508 1581 50  0001 C CNN
-F 1 "1" H 3508 1490 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 1400 50  0001 C CNN
-F 3 "~" H 3400 1400 50  0001 C CNN
-	1    3400 1400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J8
-U 1 1 5EE5C6C4
-P 3400 1300
-F 0 "J8" H 3508 1481 50  0001 C CNN
-F 1 "1" H 3508 1390 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 1300 50  0001 C CNN
-F 3 "~" H 3400 1300 50  0001 C CNN
-	1    3400 1300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J7
-U 1 1 5EE5C7ED
-P 3400 1200
-F 0 "J7" H 3508 1381 50  0001 C CNN
-F 1 "A3" H 3508 1290 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 1200 50  0001 C CNN
-F 3 "~" H 3400 1200 50  0001 C CNN
-	1    3400 1200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J6
-U 1 1 5EE5C8DD
-P 3400 1100
-F 0 "J6" H 3508 1281 50  0001 C CNN
-F 1 "A2" H 3508 1190 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 1100 50  0001 C CNN
-F 3 "~" H 3400 1100 50  0001 C CNN
-	1    3400 1100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J5
-U 1 1 5EE5C9E0
-P 3400 1000
-F 0 "J5" H 3508 1181 50  0001 C CNN
-F 1 "A1" H 3508 1089 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 1000 50  0001 C CNN
-F 3 "~" H 3400 1000 50  0001 C CNN
-	1    3400 1000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J48
-U 1 1 5EE76F81
-P 3400 5450
-F 0 "J48" H 3508 5631 50  0001 C CNN
-F 1 "1" H 3508 5540 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 5450 50  0001 C CNN
-F 3 "~" H 3400 5450 50  0001 C CNN
-	1    3400 5450
-	1    0    0    -1  
+L 2020-07-14_18-22-10:SBH11-PBPC-D25-ST-BK J3
+U 1 1 5F168F33
+P 3250 3000
+F 0 "J3" V 3800 3000 50  0000 L CNN
+F 1 "SBH11-PBPC-D25-ST-BK" V 3800 1950 50  0000 L CNN
+F 2 "ul_SBH11PBPCD25STBK:SBH11-PBPC-D25-ST-BK" H 3250 3000 50  0001 C CNN
+F 3 "~" H 3250 3000 50  0001 C CNN
+	1    3250 3000
+	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	3600 1000 3700 1000
+	3250 3950 3250 3000
 Wire Wire Line
-	3700 1100 3600 1100
+	3350 3950 3350 3000
 Wire Wire Line
-	3600 1200 3700 1200
+	3450 3950 3450 3000
 Wire Wire Line
-	3700 1300 3600 1300
+	3550 3000 3550 3950
 Wire Wire Line
-	3600 1400 3700 1400
+	3650 3950 3650 3000
 Wire Wire Line
-	3700 1500 3600 1500
+	3750 3000 3750 3950
 Wire Wire Line
-	3600 1600 3700 1600
+	3850 3950 3850 3000
 Wire Wire Line
-	3700 1700 3600 1700
+	3950 3950 3950 3000
 Wire Wire Line
-	3600 1800 3700 1800
+	4050 3950 4050 3000
 Wire Wire Line
-	3700 2050 3600 2050
+	4150 3950 4150 3000
 Wire Wire Line
-	3600 2150 3700 2150
+	4350 3000 4350 3950
 Wire Wire Line
-	3700 2250 3600 2250
+	4450 3950 4450 3000
 Wire Wire Line
-	3600 2350 3700 2350
+	4550 3000 4550 3950
 Wire Wire Line
-	3700 2450 3600 2450
+	4650 3950 4650 3000
 Wire Wire Line
-	3600 2550 3700 2550
+	4750 3000 4750 3950
 Wire Wire Line
-	3700 2650 3600 2650
+	4850 3950 4850 3000
 Wire Wire Line
-	3600 2750 3700 2750
+	4950 3950 4950 3000
 Wire Wire Line
-	3700 2850 3600 2850
+	7150 3000 7150 4000
+Text Label 5150 3800 1    50   ~ 0
++5v
+Text Label 5050 3800 1    50   ~ 0
+GND
+Text Label 3250 3800 1    50   ~ 0
+P1-UP
+Text Label 3350 3800 1    50   ~ 0
+P1-DOWN
+Text Label 3450 3800 1    50   ~ 0
+P1-LEFT
+Text Label 3550 3800 1    50   ~ 0
+P1-RIGHT
+Text Label 3650 3800 1    50   ~ 0
+P1-B0
+Text Label 3750 3800 1    50   ~ 0
+P1-B1
+Text Label 3850 3800 1    50   ~ 0
+P1-B2
+Text Label 3950 3800 1    50   ~ 0
+P1-B3
+Text Label 4050 3800 1    50   ~ 0
+P1-B4
+Text Label 4150 3800 1    50   ~ 0
+P1-B5
+Text Label 4350 3800 1    50   ~ 0
+P1-B7
+Text Label 4550 3800 1    50   ~ 0
+P1-X2
+Text Label 4650 3800 1    50   ~ 0
+P1-Y1
+Text Label 4750 3800 1    50   ~ 0
+P1-Y2
+Text Label 4850 3800 1    50   ~ 0
+P1-Z1
+Text Label 4950 3800 1    50   ~ 0
+P1-Z2
+Text Label 8150 3800 1    50   ~ 0
+P2-UP
+Text Label 8050 3800 1    50   ~ 0
+P2-DOWN
+Text Label 7950 3800 1    50   ~ 0
+P2-LEFT
+Text Label 7850 3800 1    50   ~ 0
+P2-RIGHT
+Text Label 7750 3800 1    50   ~ 0
+P2-B0
+Text Label 7650 3800 1    50   ~ 0
+P2-B1
+Text Label 7550 3800 1    50   ~ 0
+P2-B2
+Text Label 7450 3800 1    50   ~ 0
+P2-B3
+Text Label 7350 3800 1    50   ~ 0
+P2-B4
+Text Label 7250 3800 1    50   ~ 0
+P2-B5
 Wire Wire Line
-	3600 2950 3700 2950
+	8150 4000 8150 3000
+Wire Wire Line
+	8050 4000 8050 3000
+Wire Wire Line
+	7950 4000 7950 3000
+Wire Wire Line
+	7850 4000 7850 3000
+Wire Wire Line
+	7750 4000 7750 3000
+Wire Wire Line
+	7650 4000 7650 3000
+Wire Wire Line
+	7550 4000 7550 3000
+Wire Wire Line
+	7450 4000 7450 3000
+Wire Wire Line
+	7350 4000 7350 3000
+Wire Wire Line
+	7250 4000 7250 3000
+Text Label 7150 3800 1    50   ~ 0
+P2-B6
+Text Label 4250 3800 1    50   ~ 0
+P1-B6
+Text Label 6950 3800 1    50   ~ 0
+P2-X1
+Text Label 6850 3800 1    50   ~ 0
+P2-X2
+Text Label 6750 3800 1    50   ~ 0
+P2-Y1
+Text Label 6650 3800 1    50   ~ 0
+P2-Y2
+Text Label 6550 3800 1    50   ~ 0
+P2-Z1
+Text Label 6450 3800 1    50   ~ 0
+P2-Z2
+Wire Wire Line
+	7050 4000 7050 3000
+Wire Wire Line
+	6950 4000 6950 3000
+Wire Wire Line
+	6850 4000 6850 3000
+Wire Wire Line
+	6750 4000 6750 3000
+Wire Wire Line
+	6650 4000 6650 3000
+Wire Wire Line
+	6550 4000 6550 3000
+Wire Wire Line
+	6450 4000 6450 3000
+Text Label 7050 3800 1    50   ~ 0
+P2-B7
+Text Label 4450 3800 1    50   ~ 0
+P1-X1
 $Comp
-L Connector:Conn_01x01_Male J14
-U 1 1 5EE7D63B
-P 3400 1900
-F 0 "J14" H 3508 2081 50  0001 C CNN
-F 1 "1" H 3508 1990 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm-nosilk" H 3400 1900 50  0001 C CNN
-F 3 "~" H 3400 1900 50  0001 C CNN
-	1    3400 1900
-	1    0    0    -1  
+L AU-Y1008-2:AU-Y1008-2 J6
+U 1 1 5F153A04
+P 6350 5250
+F 0 "J6" V 6900 5300 60  0000 R CNN
+F 1 "AU-Y1008-2" V 6900 5150 60  0000 R CNN
+F 2 "AU-Y1008-2:AU-Y1008-2" H 6750 4790 60  0001 C CNN
+F 3 "" H 6350 5250 60  0000 C CNN
+	1    6350 5250
+	0    1    1    0   
 $EndComp
 Wire Wire Line
-	3600 1900 3700 1900
+	5250 4500 5150 4500
+$Comp
+L Device:R R1
+U 1 1 5F1D1450
+P 5000 4500
+F 0 "R1" V 5000 4500 50  0000 L CNN
+F 1 "10k" V 4950 4600 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 4930 4500 50  0001 C CNN
+F 3 "~" H 5000 4500 50  0001 C CNN
+	1    5000 4500
+	0    1    1    0   
+$EndComp
+Connection ~ 4650 5250
 Wire Wire Line
-	3600 3100 3700 3100
+	4650 5250 4650 5350
+Connection ~ 4650 5150
 Wire Wire Line
-	3700 3200 3600 3200
+	4650 5150 4650 5250
 Wire Wire Line
-	3600 3300 3700 3300
+	4650 5050 4650 5150
+$Comp
+L Switch:SW_DIP_x04 SW1
+U 1 1 5F15ACB2
+P 4950 5150
+F 0 "SW1" H 4950 4900 50  0000 C CNN
+F 1 "SW_DIP_x04" V 5350 5200 50  0000 C CNN
+F 2 "digikey-footprints:DIP-8_W7.62mm" H 4950 5150 50  0001 C CNN
+F 3 "~" H 4950 5150 50  0001 C CNN
+	1    4950 5150
+	-1   0    0    1   
+$EndComp
 Wire Wire Line
-	3700 3400 3600 3400
+	4250 3000 4250 3950
 Wire Wire Line
-	3600 3500 3700 3500
+	5350 3000 5350 4600
 Wire Wire Line
-	3700 3600 3600 3600
+	5550 3000 5550 4800
 Wire Wire Line
-	3600 3700 3700 3700
+	5450 3000 5450 4700
+$Comp
+L Device:R R3
+U 1 1 5F1A1DCF
+P 5000 4700
+F 0 "R3" V 5000 4700 50  0000 L CNN
+F 1 "10k" V 4950 4800 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 4930 4700 50  0001 C CNN
+F 3 "~" H 5000 4700 50  0001 C CNN
+	1    5000 4700
+	0    1    1    0   
+$EndComp
 Wire Wire Line
-	3700 3800 3600 3800
+	4850 4800 4850 4700
+$Comp
+L Device:R R4
+U 1 1 5F1A4A96
+P 5000 4800
+F 0 "R4" V 5000 4800 50  0000 L CNN
+F 1 "10k" V 4950 4900 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 4930 4800 50  0001 C CNN
+F 3 "~" H 5000 4800 50  0001 C CNN
+	1    5000 4800
+	0    1    1    0   
+$EndComp
+Connection ~ 4850 4700
+Connection ~ 4850 4500
 Wire Wire Line
-	3600 3900 3700 3900
+	5150 4600 5350 4600
 Wire Wire Line
-	3700 4000 3600 4000
+	5150 4700 5450 4700
 Wire Wire Line
-	3600 4100 3700 4100
+	5150 4800 5550 4800
+Connection ~ 4850 4600
 Wire Wire Line
-	3700 4200 3600 4200
+	4850 4500 4850 4600
 Wire Wire Line
-	3600 4350 3700 4350
+	4850 4600 4850 4700
+$Comp
+L Device:R R2
+U 1 1 5F19F1EF
+P 5000 4600
+F 0 "R2" V 5000 4600 50  0000 L CNN
+F 1 "10k" V 4950 4700 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 4930 4600 50  0001 C CNN
+F 3 "~" H 5000 4600 50  0001 C CNN
+	1    5000 4600
+	0    1    1    0   
+$EndComp
 Wire Wire Line
-	3700 4450 3600 4450
+	4850 4500 4650 4500
+Text Label 4650 4500 0    50   ~ 0
+GND
 Wire Wire Line
-	3600 4550 3700 4550
+	5050 3000 5050 3950
 Wire Wire Line
-	3700 4650 3600 4650
+	4650 5050 4650 4750
+Connection ~ 4650 5050
+Text Label 4650 4750 3    50   ~ 0
++5v
 Wire Wire Line
-	3600 4750 3700 4750
+	5150 3000 5150 3950
 Wire Wire Line
-	3700 4850 3600 4850
+	5250 3000 5250 4500
 Wire Wire Line
-	3600 4950 3700 4950
+	5250 4500 5250 5050
+Connection ~ 5250 4500
 Wire Wire Line
-	3700 5050 3600 5050
+	5350 4600 5350 5150
+Connection ~ 5350 4600
 Wire Wire Line
-	3600 5150 3700 5150
+	5350 5150 5250 5150
 Wire Wire Line
-	3700 5250 3600 5250
+	5450 4700 5450 5250
+Connection ~ 5450 4700
 Wire Wire Line
-	3600 5350 3700 5350
+	5450 5250 5250 5250
 Wire Wire Line
-	3700 5450 3600 5450
+	5550 5350 5550 4800
+Wire Wire Line
+	5250 5350 5550 5350
+Connection ~ 5550 4800
+Wire Wire Line
+	5650 3000 5650 5250
+Wire Wire Line
+	5750 3000 5750 5250
+Wire Wire Line
+	5850 3000 5850 5250
+Wire Wire Line
+	5950 3000 5950 5250
+Wire Wire Line
+	6050 3000 6050 5250
+Wire Wire Line
+	6150 3000 6150 5250
+Wire Wire Line
+	6250 3000 6250 5250
+Wire Wire Line
+	6350 3000 6350 5250
+Text Label 5550 3800 1    50   ~ 0
+DIP-1
+Text Label 5450 3800 1    50   ~ 0
+DIP-2
+Text Label 5350 3800 1    50   ~ 0
+DIP-3
+Text Label 5250 3800 1    50   ~ 0
+DIP-4
+Text Label 6350 3800 1    50   ~ 0
+USB-1
+Text Label 6250 3800 1    50   ~ 0
+USB-2
+Text Label 6150 3800 1    50   ~ 0
+USB-3
+Text Label 6050 3800 1    50   ~ 0
+USB-4
+Text Label 5950 3800 1    50   ~ 0
+USB-5
+Text Label 5850 3800 1    50   ~ 0
+USB-6
+Text Label 5750 3800 1    50   ~ 0
+USB-7
+Text Label 5650 3800 1    50   ~ 0
+USB-8
 $EndSCHEMATC
