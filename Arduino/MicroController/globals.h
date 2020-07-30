@@ -12,7 +12,7 @@
 /**
  * Constants
  */
-const int16_t PLAYER = 1;                // switch to 1 for player 2 microcontroller
+const int16_t PLAYER = 0;                // (0=player 1, 1=player 2)
 const int16_t AXIS_MAX = 1024;           // The highest value the controller axis should have
 const int16_t AXIS_LIMIT = AXIS_MAX / 2; // The neutral state of the axis (in the middle)
 const int16_t ENCODER_LIMIT = 256;       // The highest value an encoder can reach

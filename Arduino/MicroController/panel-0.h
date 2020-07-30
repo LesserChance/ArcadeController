@@ -11,7 +11,7 @@ const char SERIAL_TERMINATE = '\n';
 char receivedData[3];                // format x:y (x = 4 or 8 for joystick type, y = number of buttons to light)
 boolean setController = false;       // if true, update the joystick and leds
 boolean controllerIs4Way = false;    // if true, joystick should be in 4 way mode
-boolean buttonCount = 0;             // number of leds to light
+int buttonCount = 0;                 // number of leds to light
 
 void setRestictor4Way() {
   restrictorPlate.write(180); 
@@ -35,9 +35,9 @@ void checkForSerialData() {
       setController = true;
       
       controllerIs4Way = (receivedData[0] == CONTROLLER_4_WAY);
-      buttonCount = receivedData[2];
+      buttonCount = (int) receivedData[2] - 48; // convert char to int
 
-      Serial.print("ACK")
+      Serial.print("ACK");
     }
   }
 }

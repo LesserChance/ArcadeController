@@ -18,14 +18,19 @@ void panel1_setup() {
   pinMode(PIN_B0, INPUT_PULLUP);
   pinMode(PIN_B1, INPUT_PULLUP);
   pinMode(PIN_B2, INPUT_PULLUP);
+
+  // mouse axis
+  pinMode(PIN_X1, INPUT_PULLUP);
+  pinMode(PIN_X2, INPUT_PULLUP);
+  pinMode(PIN_Y1, INPUT_PULLUP);
+  pinMode(PIN_Y2, INPUT_PULLUP);
 }
 
 void panel1_loop() {
   Mouse.move(
     getMouseAxisValue(mouseX.read(), SENSITIVITY_RX, false),
     getMouseAxisValue(mouseY.read(), SENSITIVITY_RY, false),
-    0
-   );
+    0);
   mouseX.write(0);
   mouseY.write(0);
 
