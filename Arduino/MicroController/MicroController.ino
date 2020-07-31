@@ -30,6 +30,11 @@ void loop(){
   // Read DIP state to see if joystick has changed
   setActivePanel();
 
+  // Read any serial data
+  if (Serial.available() > 0) {
+    readSerialData();
+  }
+
   // set a neutral state to debounce panel changes
   gamepad.setXAxis(AXIS_LIMIT);
   gamepad.setYAxis(AXIS_LIMIT);
@@ -43,7 +48,7 @@ void loop(){
       if (!cpButtonActive[PLAYER][i]) {
         cpButtonActive[PLAYER][i] = true;
         Keyboard.press(CP_BUTTON_KEY[PLAYER][i]);
-        delay(40);
+        delay(40); // need this to get keys to read accurately, would be better to continue to allow execution and use a timer to release the key
       }
     } else if (cpButtonActive[PLAYER][i]) {
       cpButtonActive[PLAYER][i] = false;
@@ -81,6 +86,38 @@ void setActivePanel() {
       case 1:
         panel1_setup();
         break;
+    }
+  }
+}
+
+void readSerialData() {
+  // serial data format x:y (x = 4 or 8 for joystick type, y = number of buttons to light)
+  byte ndx = 0;
+  char rc;
+  char receivedData[3];
+  boolean exitRead = false;
+  
+  while (Serial.available() > 0 && !exitRead && ndx < 3) {
+    rc = Serial.read();
+  
+    if (rc != SERIAL_TERMINATE) {
+      receivedData[ndx] = rc;
+      ndx++;
+    } else {
+      boolean controllerIs4Way = (receivedData[0] == CONTROLLER_4_WAY);
+      int buttonCount = (int) receivedData[2] - 48; // convert char to int
+
+      Serial.print("ACK");
+      
+      switch (activePanel) {
+        case 0:
+          panel0_handleSerialData(controllerIs4Way, buttonCount);
+          break;
+        case 1:
+          panel1_handleSerialData(controllerIs4Way, buttonCount);
+          break;
+      }
+      exitRead = true;
     }
   }
 }

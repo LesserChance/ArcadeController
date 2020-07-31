@@ -40,4 +40,8 @@ void panel1_loop() {
   gamepad.setButton(2, !digitalRead(PIN_B2));
 }
 
+void panel1_handleSerialData(boolean controllerIs4Way, int buttonCount) {
+  // no op
+}
+
 #endif

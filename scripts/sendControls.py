@@ -46,14 +46,17 @@ class SendControls():
         ports = serial.tools.list_ports.comports()
         for port, desc, hwid in sorted(ports):
             if "Arduino" in desc:
-                ser = serial.Serial(port, 115200, write_timeout=5, timeout=5)
+                ser = serial.Serial(port, 115200, write_timeout=0, timeout=2)
                 time.sleep(1)
                 ser.flush()
                 print("writing \"{}\" to {}".format(output, port))
                 try:
                     ser.write(str.encode(output + "\n"))
-                except:
-                    print("timeout")
+                except Exception as e:
+                    sys.stderr.write('Failed to send serial data: \"{}\"\n'.format(str(e)))
+
+                data = ser.readline()
+                print("Received: \"{}\"".format(data));
                 ser.close()
 
 

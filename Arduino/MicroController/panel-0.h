@@ -5,69 +5,6 @@
 #include "globals.h"
 #include "axis.h"
 
-const char CONTROLLER_4_WAY = '4';
-const char SERIAL_TERMINATE = '\n';
-
-char receivedData[3];                // format x:y (x = 4 or 8 for joystick type, y = number of buttons to light)
-boolean setController = false;       // if true, update the joystick and leds
-boolean controllerIs4Way = false;    // if true, joystick should be in 4 way mode
-int buttonCount = 0;                 // number of leds to light
-
-void setRestictor4Way() {
-  restrictorPlate.write(180); 
-}
-
-void setRestictor8Way() {
-  restrictorPlate.write(0); 
-}
-
-void checkForSerialData() {
-  byte ndx = 0;
-  char rc;
-  
-  while (Serial.available() > 0 && setController == false && ndx < 3) {
-    rc = Serial.read();
-  
-    if (rc != SERIAL_TERMINATE) {
-      receivedData[ndx] = rc;
-      ndx++;
-    } else {
-      setController = true;
-      
-      controllerIs4Way = (receivedData[0] == CONTROLLER_4_WAY);
-      buttonCount = (int) receivedData[2] - 48; // convert char to int
-
-      Serial.print("ACK");
-    }
-  }
-}
-
-void updateController() {
-  if (setController == true) {
-    if (PLAYER == 0) {
-      // LED output
-      digitalWrite(PIN_X1, buttonCount >= 1);
-      digitalWrite(PIN_X2, buttonCount >= 2);
-      digitalWrite(PIN_Y1, buttonCount >= 3);
-      digitalWrite(PIN_Y2, buttonCount >= 4);
-      digitalWrite(PIN_Z1, buttonCount >= 5);
-      digitalWrite(PIN_UP, buttonCount >= 6);
-    }
-    
-    if (PLAYER == 1) {
-    // Restrictor plate output
-      if (controllerIs4Way) {
-        setRestictor4Way();
-      } else {
-        setRestictor8Way();
-      }
-    }
-    
-    setController = false;
-  }
-}
-
-
 /**
  * Panel 0: Catch-all 6 buttons
  * Joystick: 4-8 ways switchable (pin X to 0 for 4-way, 1 for 8 way)
@@ -127,9 +64,35 @@ void panel0_loop() {
   gamepad.setButton(3, !digitalRead(PIN_B3));
   gamepad.setButton(4, !digitalRead(PIN_B4));
   gamepad.setButton(5, !digitalRead(PIN_B5));
+}
+
+void setRestictor4Way() {
+  restrictorPlate.write(180); 
+}
+
+void setRestictor8Way() {
+  restrictorPlate.write(0); 
+}
+
+void panel0_handleSerialData(boolean controllerIs4Way, int buttonCount) {
+  if (PLAYER == 0) {
+    // LED output
+    digitalWrite(PIN_X1, buttonCount >= 1);
+    digitalWrite(PIN_X2, buttonCount >= 2);
+    digitalWrite(PIN_Y1, buttonCount >= 3);
+    digitalWrite(PIN_Y2, buttonCount >= 4);
+    digitalWrite(PIN_Z1, buttonCount >= 5);
+    digitalWrite(PIN_UP, buttonCount >= 6);
+  }
   
-  checkForSerialData();
-  updateController();
+  if (PLAYER == 1) {
+    // Restrictor plate output
+    if (controllerIs4Way) {
+      setRestictor4Way();
+    } else {
+      setRestictor8Way();
+    }
+  }
 }
 
 #endif

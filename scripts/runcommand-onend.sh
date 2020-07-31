@@ -1,2 +1,2 @@
 #!/bin/bash
-python /home/pi/scripts/sendControls.py
+python /home/pi/scripts/sendControls.py &

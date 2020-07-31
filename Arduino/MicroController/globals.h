@@ -24,6 +24,8 @@ const byte JOY_BUTTON_PIN[] = {PIN_B0, PIN_B1, PIN_B2, PIN_B3, PIN_B4, PIN_B5, P
 const byte CP_BUTTON_PIN[] = {PIN_MAIN_18, PIN_MAIN_19, PIN_MAIN_20, PIN_MAIN_21, PIN_MAIN_22};
 const byte CP_BUTTON_KEY[][sizeof(CP_BUTTON_PIN)] = {{'1','5',KEY_F1,KEY_ESC,'p'},{'2','6','l','-','c'}};
 const byte PANEL_DIP_PIN[] = {PIN_DIP_0, PIN_DIP_1, PIN_DIP_2};
+const char CONTROLLER_4_WAY = '4';
+const char SERIAL_TERMINATE = '\n';
 
 /**
  * Global Variables
