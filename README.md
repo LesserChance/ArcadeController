@@ -3,6 +3,8 @@ The goal of this project is to make an easily-swappable control panel for a home
 
 As I build out more control panels I'll be adding pictures and diagrams of how everything operates.
 
+![](https://drive.google.com/uc?export=download&id=1ZMfflTOQWMDqQqRfRtQ-0ZnhuqHTtxrK)
+
 ## Electronics
 ### PCB: Panel
 One Panel PCB exists for each control panel. The Panel PCB exists as the interface between the controls (joysticks, trackballs, spinners, USB devices) and the Main interface. It is split into various sections. Full wiring diagrams can be found in the docs directory.
