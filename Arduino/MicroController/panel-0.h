@@ -5,6 +5,35 @@
 #include "globals.h"
 #include "axis.h"
 
+int RESTRICTOR_0_4_WAY_P1 = 70;
+int RESTRICTOR_0_8_WAY_P1 = 20;
+int RESTRICTOR_0_4_WAY_P2 = 95;
+int RESTRICTOR_0_8_WAY_P2 = 45;
+
+void setRestictor4Way() {
+  restrictorPlatePlayerOne.attach(PIN_X2);
+  restrictorPlatePlayerOne.write(RESTRICTOR_0_4_WAY_P1); 
+  restrictorPlatePlayerTwo.attach(PIN_Y1);
+  restrictorPlatePlayerTwo.write(RESTRICTOR_0_4_WAY_P2); 
+  
+  delay(300);
+  
+  restrictorPlatePlayerOne.detach(); 
+  restrictorPlatePlayerTwo.detach(); 
+}
+
+void setRestictor8Way() {
+  restrictorPlatePlayerOne.attach(PIN_X2);
+  restrictorPlatePlayerOne.write(RESTRICTOR_0_8_WAY_P1); 
+  restrictorPlatePlayerTwo.attach(PIN_Y1);
+  restrictorPlatePlayerTwo.write(RESTRICTOR_0_8_WAY_P2); 
+  
+  delay(300);
+  
+  restrictorPlatePlayerOne.detach(); 
+  restrictorPlatePlayerTwo.detach();
+}
+
 /**
  * Panel 0: Catch-all 6 buttons
  * Joystick: 4-8 ways switchable (pin X to 0 for 4-way, 1 for 8 way)
@@ -13,7 +42,6 @@
  * controller type pins: 1, 14, 2, 15,  0, 13 (player two only)
  */
 void panel0_setup() {
-  Serial.println("panel0_setup");
   // Joystick switches
   pinMode(PIN_Z2, INPUT_PULLUP);        // up is wired to Z2
   pinMode(PIN_DOWN, INPUT_PULLUP);
@@ -35,20 +63,23 @@ void panel0_setup() {
     pinMode(PIN_Y1, OUTPUT);
     pinMode(PIN_Y2, OUTPUT);
     pinMode(PIN_Z1, OUTPUT);
-    pinMode(PIN_UP, OUTPUT);
   
-    digitalWrite(PIN_X1, 0);
-    digitalWrite(PIN_X2, 0);
-    digitalWrite(PIN_Y1, 0);
-    digitalWrite(PIN_Y2, 0);
-    digitalWrite(PIN_Z1, 0);
-    digitalWrite(PIN_UP, 0);
+    digitalWrite(PIN_X1, 1);
+    digitalWrite(PIN_X2, 1);
+    digitalWrite(PIN_Y1, 1);
+    digitalWrite(PIN_Y2, 1);
+    digitalWrite(PIN_Z1, 1);
   }
   
   if (PLAYER == 1) {
+    // LED output
+    pinMode(PIN_X1, OUTPUT); // button 6
+    digitalWrite(PIN_X1, 1);
+    
     // Restrictor plate output
-    pinMode(PIN_X2, OUTPUT);
-    restrictorPlate.attach(PIN_X2);
+    pinMode(PIN_X2, OUTPUT); // player 1
+    pinMode(PIN_Y1, OUTPUT); // player 2
+    setRestictor8Way();
   }
 }
 
@@ -66,14 +97,6 @@ void panel0_loop() {
   gamepad.setButton(5, !digitalRead(PIN_B5));
 }
 
-void setRestictor4Way() {
-  restrictorPlate.write(180); 
-}
-
-void setRestictor8Way() {
-  restrictorPlate.write(0); 
-}
-
 void panel0_handleSerialData(boolean controllerIs4Way, int buttonCount) {
   if (PLAYER == 0) {
     // LED output
@@ -82,10 +105,12 @@ void panel0_handleSerialData(boolean controllerIs4Way, int buttonCount) {
     digitalWrite(PIN_Y1, buttonCount >= 3);
     digitalWrite(PIN_Y2, buttonCount >= 4);
     digitalWrite(PIN_Z1, buttonCount >= 5);
-    digitalWrite(PIN_UP, buttonCount >= 6);
   }
   
   if (PLAYER == 1) {
+    // LED output
+    digitalWrite(PIN_X1, buttonCount >= 6);
+    
     // Restrictor plate output
     if (controllerIs4Way) {
       setRestictor4Way();

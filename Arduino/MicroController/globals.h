@@ -16,10 +16,7 @@ const int16_t PLAYER = 0;                // (0=player 1, 1=player 2)
 const int16_t AXIS_MAX = 1024;           // The highest value the controller axis should have
 const int16_t AXIS_LIMIT = AXIS_MAX / 2; // The neutral state of the axis (in the middle)
 const int16_t ENCODER_LIMIT = 256;       // The highest value an encoder can reach
-const byte JOY_UP_PIN = PIN_Z2;
-const byte JOY_DOWN_PIN = PIN_DOWN;
-const byte JOY_LEFT_PIN = PIN_LEFT;
-const byte JOY_RIGHT_PIN = PIN_RIGHT;
+
 const byte JOY_BUTTON_PIN[] = {PIN_B0, PIN_B1, PIN_B2, PIN_B3, PIN_B4, PIN_B5, PIN_Z1, PIN_Y2, PIN_Y1, PIN_X2, PIN_X1, PIN_UP};
 const byte CP_BUTTON_PIN[] = {PIN_MAIN_18, PIN_MAIN_19, PIN_MAIN_20, PIN_MAIN_21, PIN_MAIN_22};
 const byte CP_BUTTON_KEY[][sizeof(CP_BUTTON_PIN)] = {{'1','5',KEY_F1,KEY_ESC,'p'},{'2','6','l','-','c'}};
@@ -52,10 +49,11 @@ Joystick_ gamepad(
   false // steering
 );
 
-Encoder mouseX(PIN_Y1, PIN_Y2);
-Encoder mouseY(PIN_X1, PIN_X2);
-Encoder mouseZ(PIN_Z1, PIN_Z2);
+Encoder mouseAxis1(PIN_Y1, PIN_Y2);
+Encoder mouseAxis2(PIN_X1, PIN_X2);
+Encoder mouseAxis3(PIN_Z1, PIN_Z2);
 
-Servo restrictorPlate;
+Servo restrictorPlatePlayerOne;
+Servo restrictorPlatePlayerTwo;
 
 #endif

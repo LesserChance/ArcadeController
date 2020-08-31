@@ -1,4 +1,3 @@
-
 // Library imports
 #include <Encoder.h>
 #include <Joystick.h>
@@ -12,6 +11,8 @@
 #include "axis.h"
 #include "panel-0.h"
 #include "panel-1.h"
+#include "panel-2.h"
+#include "panel-3.h"
 
 void setup() {
   Serial.begin(115200);
@@ -63,6 +64,12 @@ void loop(){
     case 1:
       panel1_loop();
       break;
+    case 2:
+      panel2_loop();
+      break;
+    case 3:
+      panel3_loop();
+      break;
   }
   
   gamepad.sendState();
@@ -85,6 +92,12 @@ void setActivePanel() {
         break;
       case 1:
         panel1_setup();
+        break;
+      case 2:
+        panel2_setup();
+        break;
+      case 3:
+        panel3_setup();
         break;
     }
   }
@@ -115,6 +128,12 @@ void readSerialData() {
           break;
         case 1:
           panel1_handleSerialData(controllerIs4Way, buttonCount);
+          break;
+        case 2:
+          panel2_handleSerialData(controllerIs4Way, buttonCount);
+          break;
+        case 3:
+          panel3_handleSerialData(controllerIs4Way, buttonCount);
           break;
       }
       exitRead = true;

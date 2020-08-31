@@ -1,7 +1,7 @@
 #ifndef _PINMAP_H
 #define _PINMAP_H
 
-const byte PIN_UP = 17;
+const byte PIN_UP = 17; // dont use this pin, pin 17 is used for the onboard LED and seems to randomly bounce
 const byte PIN_DOWN = 3;
 const byte PIN_LEFT = 4;
 const byte PIN_RIGHT = 5;

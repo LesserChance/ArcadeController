@@ -6,9 +6,9 @@
 
 void setGamepadYAxis(byte up_pin, byte down_pin) {
   if (!digitalRead(up_pin)) {
-    gamepad.setYAxis(AXIS_MAX);
-  } else if (!digitalRead(down_pin)) {
     gamepad.setYAxis(0);
+  } else if (!digitalRead(down_pin)) {
+    gamepad.setYAxis(AXIS_MAX);
   } else {
     gamepad.setYAxis(AXIS_LIMIT);
   }
@@ -24,7 +24,7 @@ void setGamepadXAxis(byte left_pin, byte right_pin) {
   }
 }
 
-int getMouseAxisValue(int encoderValue, int sensitivity, bool flip) {
+int getMouseAxisValue(int encoderValue, float sensitivity, bool flip) {
   int newValue = constrain(encoderValue * sensitivity * (flip ? -1 : 1), -ENCODER_LIMIT, ENCODER_LIMIT);
   newValue = map(newValue, -ENCODER_LIMIT, ENCODER_LIMIT, -AXIS_LIMIT, AXIS_LIMIT);
   return newValue;
