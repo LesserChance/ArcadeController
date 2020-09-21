@@ -3,7 +3,7 @@ The goal of this project is to make an easily-swappable control panel for a home
 
 As I build out more control panels I'll be adding pictures and diagrams of how everything operates.
 
-![](https://drive.google.com/uc?export=download&id=1ZMfflTOQWMDqQqRfRtQ-0ZnhuqHTtxrK)
+![](assets/final.jpg?raw=true)
 
 ## Electronics
 ### PCB: Panel
